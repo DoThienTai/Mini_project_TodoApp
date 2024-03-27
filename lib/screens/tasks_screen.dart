@@ -4,6 +4,7 @@ import '../models/task.dart';
 import '../widgets/tasks_list.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_todoey/models/task_data.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TasksScreen extends StatelessWidget {
   @override
@@ -37,27 +38,27 @@ class TasksScreen extends StatelessWidget {
         children: [
           Container(
             padding: EdgeInsets.only(
-                top: 60.0, left: 30.0, bottom: 30.0, right: 30.0),
+                top: 60.h, left: 30.w, bottom: 30.h ,right: 30.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CircleAvatar(
                   child: Icon(
                     Icons.list,
-                    size: 30.0,
+                    size: 30.h,
                     color: Colors.lightBlueAccent,
                   ),
                   backgroundColor: Colors.white,
-                  radius: 30.0,
+                  radius: 30.h,
                 ),
                 SizedBox(
-                  height: 10.0,
+                  height: 10.h,
                 ),
                 Text(
                   'Todoey',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 50.0,
+                    fontSize: 50.sp,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
@@ -66,7 +67,7 @@ class TasksScreen extends StatelessWidget {
                   '${Provider.of<TaskData>(context).getCount} Tasks',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18.0,
+                    fontSize: 18.sp,
                   ),
                 ),
               ],
@@ -75,13 +76,13 @@ class TasksScreen extends StatelessWidget {
           Expanded(
             child: Container(
               padding: EdgeInsets.only(
-                  top: 60.0, left: 30.0, bottom: 30.0, right: 30.0),
-              height: 300.0,
+                  top: 60.h, left: 30.w, bottom: 30.h, right: 30.w),
+              height: 300.h,
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20.0),
-                      topRight: Radius.circular(20.0))),
+                      topLeft: Radius.circular(20.h),
+                      topRight: Radius.circular(20.h))),
               child: TasksList(),//tasks: tasks
             ),
           ),

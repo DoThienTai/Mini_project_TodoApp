@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_todoey/models/task.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_todoey/models/task_data.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AddTasksScreen extends StatelessWidget {
   // late final Function addTaskCallback;
@@ -13,12 +14,12 @@ class AddTasksScreen extends StatelessWidget {
       color: Color(0xff757575),
       child: Container(
         padding:
-            EdgeInsets.only(top: 60.0, left: 40.0, bottom: 30.0, right: 40.0),
+            EdgeInsets.only(top: 60.h, left: 40.w, bottom: 30.h, right: 40.w),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20.0),
-            topRight: Radius.circular(20.0),
+            topLeft: Radius.circular(20.h),
+            topRight: Radius.circular(20.h),
           ),
         ),
         child: Column(
@@ -27,7 +28,7 @@ class AddTasksScreen extends StatelessWidget {
               'Add Task',
               style: TextStyle(
                 color: Colors.lightBlueAccent,
-                fontSize: 30.0,
+                fontSize: 30.sp,
               ),
             ),
             TextField(
